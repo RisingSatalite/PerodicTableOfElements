@@ -278,6 +278,8 @@ class MyApp(App):
 
         for x in type:
             main = BoxLayout(orientation='horizontal')
+
+            print(x)
             
             # Right-aligned label
             right_label = Label(text=f"{x} ", halign='right', valign='middle')
@@ -295,7 +297,7 @@ class MyApp(App):
         content.add_widget(close_button)
         
         # Create the popup
-        popup = Popup(title='My Popup',
+        popup = Popup(title=f'{type["Element"]}',
                       content=content,
                       size_hint=(0.95, 0.95),
                       auto_dismiss=False)
