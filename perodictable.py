@@ -125,12 +125,6 @@ class MyApp(App):
             button.bind(on_press=lambda instance: self.show_popup(instance, data))
             where.add_widget(button)
 
-        def create_button_with_text(text, where):
-            return_dictionary_for_element(text)
-            button = Button(text=text)
-            button.bind(on_press=lambda instance: self.show_popup(instance, text))
-            where.add_widget(button)
-
         # Read data
         def read_csv_to_list(file_path):
             data = []
