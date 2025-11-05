@@ -7,7 +7,7 @@ from kivy.uix.behaviors import ButtonBehavior
 from kivy.graphics import Color, Rectangle, Line
 import csv
 
-# pyinstaller --noconsole --onefile perodictable.py
+# pyinstaller --noconsole --onefile --ico=icon.ico perodictable.py
 
 global data_list# why does global stop an error?
 settings = []
