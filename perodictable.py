@@ -8,6 +8,8 @@ from kivy.graphics import Color, Rectangle, Line
 import csv
 import logging
 
+# pyinstaller --noconsole --onefile perodictable.py
+
 global data_list# why does global stop an error?
 settings = []
 
