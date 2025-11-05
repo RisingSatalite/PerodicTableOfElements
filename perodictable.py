@@ -66,10 +66,10 @@ class PeriodicButton(ButtonBehavior, BoxLayout):
             pass
 
         # Create labels with different font sizes
-        number_label = Label(text=number, font_size='15sp', halign='left', valign='top', size_hint=(0.7, 1))
+        number_label = Label(text=f" {number}", font_size='15sp', halign='left', valign='top', size_hint=(0.7, 1))
         number_label.bind(size=number_label.setter('text_size'))
 
-        weight_label = Label(text=weight, font_size='15sp', halign='right', valign='top', size_hint=(1, 1))
+        weight_label = Label(text=f"{weight} ", font_size='15sp', halign='right', valign='top', size_hint=(1, 1))
         weight_label.bind(size=weight_label.setter('text_size'))
         
         symbol_label = Label(text=symbol, font_size='22sp', valign='middle', size_hint=(1, 1))
