@@ -278,8 +278,6 @@ class MyApp(App):
 
         for x in type:
             main = BoxLayout(orientation='horizontal')
-
-            print(x)
             
             # Right-aligned label
             right_label = Label(text=f"{x} ", halign='right', valign='middle')
