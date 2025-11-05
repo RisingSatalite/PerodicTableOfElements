@@ -6,7 +6,6 @@ from kivy.uix.popup import Popup
 from kivy.uix.behaviors import ButtonBehavior
 from kivy.graphics import Color, Rectangle, Line
 import csv
-import logging
 
 # pyinstaller --noconsole --onefile perodictable.py
 
@@ -288,6 +287,5 @@ class MyApp(App):
         popup.open()
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO)
     MyApp().run()
 #try not 1 file
