@@ -211,24 +211,9 @@ class MyApp(App):
         layout.add_widget(layout5)
 
         layout6 = BoxLayout(orientation='horizontal')
-        create_button("Rb", layout6)
-        create_button("Sr", layout6)
-        create_button("Y", layout6)
-        create_button("Zr", layout6)
-        create_button("Nb", layout6)
-        create_button("Mo", layout6)
-        create_button("Tc", layout6)
-        create_button("Ru", layout6)
-        create_button("Rh", layout6)
-        create_button("Pd", layout6)
-        create_button("Ag", layout6)
-        create_button("Cd", layout6)
-        create_button("In", layout6)
-        create_button("Sn", layout6)
-        create_button("Sb", layout6)
-        create_button("Te", layout6)
-        create_button("I", layout6)
-        create_button("Xe", layout6)
+        elementList5 = ["Rb", "Sr", "Y", "Zr", "Nb", "Mo", "Tc", "Ru", "Rh", "Pd", "Ag", "Cd", "In", "Sn", "Sb", "Te", "I", "Xe"]
+        for i in elementList5:
+            create_button(i, layout6)
         layout.add_widget(layout6)
 
         layout7 = BoxLayout(orientation='horizontal')
