@@ -131,6 +131,9 @@ class MyApp(App):
             button.bind(on_press=lambda instance: self.show_popup(instance, data))
             where.add_widget(button)
 
+        def create_break_label(where):
+            where.add_widget(Label(size_hint =(.2, 1)))
+
         # Read data
         def read_csv_to_list(file_path):
             data = []
@@ -164,6 +167,8 @@ class MyApp(App):
         create_button("H", layout2)
         for i in range(16):
             layout2.add_widget(Label()) 
+            
+        create_break_label(layout2)
         create_button("He", layout2)
         layout.add_widget(layout2)
 
@@ -173,6 +178,7 @@ class MyApp(App):
         create_button("Be", layout3)
         for i in range(10):
             layout3.add_widget(Label())
+        create_break_label(layout3)
         create_button("B", layout3)
         create_button("C", layout3)
         create_button("N", layout3)
@@ -185,6 +191,7 @@ class MyApp(App):
         layout4 = BoxLayout(orientation='horizontal')
         create_button("Na", layout4)
         create_button("Mg", layout4)
+        create_break_label(layout4)
         for i in range(10):
             layout4.add_widget(Label())
         create_button("Al", layout4)
@@ -199,6 +206,7 @@ class MyApp(App):
         create_button("K", layout5)
         create_button("Ca", layout5)
         create_button("Sc", layout5)
+        create_break_label(layout5)
         create_button("Ti", layout5)
         create_button("V", layout5)
         create_button("Cr", layout5)
@@ -217,21 +225,30 @@ class MyApp(App):
         layout.add_widget(layout5)
 
         layout6 = BoxLayout(orientation='horizontal')
-        elementList5 = ["Rb", "Sr", "Y", "Zr", "Nb", "Mo", "Tc", "Ru", "Rh", "Pd", "Ag", "Cd", "In", "Sn", "Sb", "Te", "I", "Xe"]
+        elementList5 = ["Rb", "Sr", "Y", "", "Zr", "Nb", "Mo", "Tc", "Ru", "Rh", "Pd", "Ag", "Cd", "In", "Sn", "Sb", "Te", "I", "Xe"]
         for i in elementList5:
-            create_button(i, layout6)
+            if(i == ""):
+                create_break_label(layout6)
+            else:
+                create_button(i, layout6)
         layout.add_widget(layout6)
 
         layout7 = BoxLayout(orientation='horizontal')
-        elementList6 = ['Cs','Ba','La','Hf','Ta','W','Re','Os','Ir','Pt','Au','Hg','Tl','Pb','Bi','Po','At','Rn']
+        elementList6 = ['Cs','Ba','La', "", 'Hf','Ta','W','Re','Os','Ir','Pt','Au','Hg','Tl','Pb','Bi','Po','At','Rn']
         for i in elementList6:
-            create_button(i, layout7)
+            if(i == ""):
+                create_break_label(layout7)
+            else:
+                create_button(i, layout7)
         layout.add_widget(layout7)
 
         layout8 = BoxLayout(orientation='horizontal')
-        elementList7 = ['Fr','Ra','Ac','Rf','Db','Sg','Bh','Hs','Mt','Ds','Rg','Cn','Nh','Fl','Mc','Lv','Ts','Og']
+        elementList7 = ['Fr','Ra','Ac', "",'Rf','Db','Sg','Bh','Hs','Mt','Ds','Rg','Cn','Nh','Fl','Mc','Lv','Ts','Og']
         for i in elementList7:
-            create_button(i, layout8)
+            if(i == ""):
+                create_break_label(layout8)
+            else:
+                create_button(i, layout8)
         layout.add_widget(layout8)
 
         layout.add_widget(Label(size_hint_y=0.5))
@@ -239,18 +256,24 @@ class MyApp(App):
         layout9 = BoxLayout(orientation='horizontal')
         for i in range(3):
             layout9.add_widget(Label())
-        elementList8 = ['Ce','Pr','Nd','Pm','Sm','Eu','Gd','Tb','Dy','Ho','Er','Tm','Yb','Lu']
+        elementList8 = ['','Ce','Pr','Nd','Pm','Sm','Eu','Gd','Tb','Dy','Ho','Er','Tm','Yb','Lu']
         for i in elementList8:
-            create_button(i, layout9)
+            if(i == ""):
+                create_break_label(layout9)
+            else:
+                create_button(i, layout9)
         layout9.add_widget(Label())
         layout.add_widget(layout9)
 
         layout10 = BoxLayout(orientation='horizontal')
         for i in range(3):
             layout10.add_widget(Label())
-        elementList9 = ['Th','Pa','U','Np','Pu','Am','Cm','Bk','Cf','Es','Fm','Md','No','Lr']
+        elementList9 = ['','Th','Pa','U','Np','Pu','Am','Cm','Bk','Cf','Es','Fm','Md','No','Lr']
         for i in elementList9:
-            create_button(i, layout10)
+            if(i == ""):
+                create_break_label(layout10)
+            else:
+                create_button(i, layout10)
         layout10.add_widget(Label())
         layout.add_widget(layout10)
 
