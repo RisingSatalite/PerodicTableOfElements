@@ -261,20 +261,41 @@ class MyApp(App):
         content = BoxLayout(orientation='vertical')
         content.add_widget(Label(text=f"Element information"))
 
+        header = BoxLayout(orientation='horizontal')
+        element_sybmol = Label(text=f"Not Entered", halign='right', valign='middle')
+
+        most_important_data = BoxLayout(orientation='vertical')
+        most_important_upper = BoxLayout(orientation='horizontal')
+        most_important_lower = BoxLayout(orientation='horizontal')
+
+        most_important_data.add_widget(most_important_upper)
+        most_important_data.add_widget(most_important_lower)
+
+        header.add_widget(element_sybmol)
+        header.add_widget(most_important_data)
+        content.add_widget(header)
+
         for x in type:
             main = BoxLayout(orientation='horizontal')
+
+            if(x == "Symbol"):
+                element_sybmol.text = f"{type[x]}"
+                print("Found sybmol")
+                continue
             
             # Right-aligned label
             right_label = Label(text=f"{x} ", halign='right', valign='middle')
             right_label.bind(size=right_label.setter('text_size'))
             main.add_widget(right_label)
-            
+
             # Left-aligned label
             left_label = Label(text=f" {type[x]}", halign='left', valign='middle')
             left_label.bind(size=left_label.setter('text_size'))
             main.add_widget(left_label)
             
             content.add_widget(main)
+            print(x)
+            print(type[x])
 
         close_button = Button(text="Close")
         content.add_widget(close_button)
