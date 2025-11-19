@@ -289,8 +289,8 @@ class MyApp(App):
                 continue
 
             if(x == "Element"):
-                label = Label(text=f"Name: {type[x]} ", halign='right', valign='middle')
-                most_important_upper.add_widget(label)
+                label = Label(text=f"{type[x]} ", halign='right', valign='middle')
+                most_important_lower.add_widget(label)
                 continue
 
             if(x == "AtomicMass"):
@@ -311,6 +311,29 @@ class MyApp(App):
             if(x == "NumberofNeutrons"):
                 label = Label(text=f"Neutrons: {type[x]} ", halign='right', valign='middle')
                 most_important_upper.add_widget(label)
+                continue
+
+            if(x == "Period"):
+                label = Label(text=f"Period: {type[x]} ", halign='right', valign='middle')
+                most_important_lower.add_widget(label)
+                continue
+
+            if(x == "Group"):
+                label = Label(text=f"Group: {type[x]} ", halign='right', valign='middle')
+                most_important_lower.add_widget(label)
+                continue
+
+            if(x == "Phase"):
+                label = Label(text=f"Phase: {type[x]} ", halign='right', valign='middle')
+                most_important_lower.add_widget(label)
+                continue
+
+            if(x == "Radioactive"):
+                labelText = "Not radioactive"
+                if(type[x] == "yes"):
+                    labelText = "Radioactive"
+                label = Label(text=f"{labelText} ", halign='right', valign='middle')
+                most_important_lower.add_widget(label)
                 continue
 
             # Right-aligned label
