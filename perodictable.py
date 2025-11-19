@@ -284,18 +284,33 @@ class MyApp(App):
                 continue
 
             if(x == "AtomicNumber"):
-                label = Label(text=f"{type[x]} ", halign='right', valign='middle')
+                label = Label(text=f"# {type[x]} ", halign='right', valign='middle')
                 most_important_upper.add_widget(label)
                 continue
 
             if(x == "Element"):
-                label = Label(text=f"{type[x]} ", halign='right', valign='middle')
+                label = Label(text=f"Name: {type[x]} ", halign='right', valign='middle')
                 most_important_upper.add_widget(label)
                 continue
 
             if(x == "AtomicMass"):
-                label = Label(text=f"{type[x]} ", halign='right', valign='middle')
-                most_important_lower.add_widget(label)
+                label = Label(text=f"Mass: {type[x]} ", halign='right', valign='middle')
+                most_important_upper.add_widget(label)
+                continue
+
+            if(x == "NumberofProtons"):
+                label = Label(text=f"Protons: {type[x]} ", halign='right', valign='middle')
+                most_important_upper.add_widget(label)
+                continue
+
+            if(x == "NumberofElectrons"):
+                label = Label(text=f"Electrons: {type[x]} ", halign='right', valign='middle')
+                most_important_upper.add_widget(label)
+                continue
+
+            if(x == "NumberofNeutrons"):
+                label = Label(text=f"Neutrons: {type[x]} ", halign='right', valign='middle')
+                most_important_upper.add_widget(label)
                 continue
 
             # Right-aligned label
